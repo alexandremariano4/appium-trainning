@@ -1,5 +1,3 @@
----
-
 ## Montando o ambiente
 
 ### Java
