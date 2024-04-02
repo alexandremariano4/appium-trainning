@@ -10,7 +10,7 @@
 * [AVD](#avd)
 * [ADB](#adb)
     * [Comandos ADB úteis](#comandos-adb-úteis)
-    * [Referências](#referências)
+* [Referências](#referências)
 
 
 ## Java ☕
