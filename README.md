@@ -10,6 +10,7 @@
 * [AVD](#avd)
 * [ADB](#adb)
     * [Comandos ADB úteis](#comandos-adb-úteis)
+    * [Referências](#referências)
 
 
 ## Java ☕
@@ -206,3 +207,9 @@ https://github.com/clarabez/comandosadb
 **Usar os comandos acima ↑**
 
 ---
+### Referências
+- https://github.com/clarabez/appium
+- https://www.udemy.com/course/testes-appium/
+- https://www.youtube.com/watch?v=R1vm0RF66C8&t=1438s&pp=ygURYXBwaXVtIGR1bm9zc2F1cm8%3D
+- https://appium.io/docs/en/latest/
+- https://appium.github.io/appium-inspector/2024.2/quickstart/installation/
