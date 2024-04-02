@@ -1,10 +1,9 @@
 # 👷Montando o ambiente🏗️
 
-# Índice 🗂️
-
-* [Java](#java)
-* [Android Studio](#android-studio)
-* [Comandos de terminal](#comandos-de-terminal)
+* [Montando o ambiente](#montando-o-ambiente)
+    * [Java](#java)
+    * [Android Studio](#android-studio)
+    * [Comandos de terminal](#comandos-de-terminal)
 
 * [Iniciando com Appium (emulador local)](#iniciando-com-appium-emulador-local)
 * [Instalar aplicativos dentro do emulador](#instalar-aplicativos-dentro-do-emulador)
@@ -13,7 +12,7 @@
     * [Comandos ADB úteis](#comandos-adb-úteis)
 
 
-### Java ☕
+## Java ☕
 
 Baixe o **Java JDK** : https://www.oracle.com/br/java/technologies/downloads/
 
@@ -23,7 +22,7 @@ Coloque nas variáveis de ambiente o JAVA_HOME, que é o diretório que acabou d
 
 E depois adicione no path o caminho da pasta “`bin`” do java, neste formato: `%JAVA_HOME%\bin`
 
-### Android Studio 📲
+## Android Studio 📲
 
 Baixe e instale o **Android Studio**: https://developer.android.com/studio?hl=pt-br seguindo os passos básicos
 
@@ -40,7 +39,7 @@ Após ter criado o emulador e conseguido executá-lo a primeira vez, coloque a p
 
 E logo depois crie duas variáveis de ambiente com os caminhos sendo “`%ANDROID_HOME%\platform-tools`” e “`%ANDROID_HOME%\emulator`” para ser possível executar o “adb” e o “emulator” por linha de comando..
 
-### Comandos de terminal (emulator) 🚨
+## Comandos de terminal (emulator) 🚨
 
 - emulator -list-avds →  Mostra todas os dispositivos virtuais
 - emulator -avd `appium` → Inicia o emulador sem precisar abrir o android studio
@@ -88,7 +87,7 @@ Capabilities mais refinadas para abrir com um aplicativo ([Necessário ter o apl
 
 ---
 
-### Iniciando a automação
+## Iniciando a automação
 
 Passo a passo
 
@@ -109,7 +108,7 @@ O inspector tira uma screen shot do emulador e mostra os elementos, portanto, pa
 
 ---
 
-### Instalar aplicativos dentro do emulador
+## Instalar aplicativos dentro do emulador
 
 **APK Downloader**
 
@@ -148,7 +147,7 @@ Vamos seguir os passos indicados [aqui](https://www.notion.so/Appium-ed57c34b4a1
 
 ---
 
-### AVD
+## AVD
 
 Pode-se usar o telnet (https://www.locaweb.com.br/ajuda/wiki/como-utilizar-o-telnet/) para se conectar ao device em tempo de execução para ter informações sobre ele, tendo alguns comandos úteis para se utilizar usando o “`avd`”: 
 
@@ -158,7 +157,7 @@ use o comando `avd help` após se conectar ao device para ter mais informações
 
 ---
 
-### ADB
+## ADB
 
 Abrir outro terminal e usar o comando “`adb shell`” faz com que tenha acesso ao emulador em tempo real.
 
