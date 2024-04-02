@@ -36,7 +36,7 @@ Quando abrir o android studio, escolha a opção “**Custom**” em vez de “*
 - No lado direito procure a opção “**Device Manager**” e clique para adicionar um novo dispositivo e escolha a opção do dispositivo (Exemplo: Pixel 2), após isso selecione a API Level (igual a instalada acima no SDK Platforms)
 - Para iniciar o emulador é só clicar no botão de Play
 
-Após ter criado o emulador e conseguido executá-lo a primeira vez, coloque a pasta do Sdk numa variáve de ambiente “`ANDROID_HOME`”, geralmente fica em um caminho parecido com “`C:\usr\alexa\AppData\Local\Android\Sdk`”
+Após ter criado o emulador e conseguido executá-lo a primeira vez, coloque a pasta do Sdk numa variáve de ambiente “`ANDROID_HOME`”, geralmente fica em um caminho parecido com “`C:\usr\user\AppData\Local\Android\Sdk`”
 
 E logo depois crie duas variáveis de ambiente com os caminhos sendo “`%ANDROID_HOME%\platform-tools`” e “`%ANDROID_HOME%\emulator`” para ser possível executar o “adb” e o “emulator” por linha de comando..
 
