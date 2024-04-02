@@ -207,7 +207,7 @@ https://github.com/clarabez/comandosadb
 **Usar os comandos acima ↑**
 
 ---
-### Referências
+## Referências
 - https://github.com/clarabez/appium
 - https://www.udemy.com/course/testes-appium/
 - https://www.youtube.com/watch?v=R1vm0RF66C8&t=1438s&pp=ygURYXBwaXVtIGR1bm9zc2F1cm8%3D
