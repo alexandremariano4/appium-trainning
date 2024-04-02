@@ -1,4 +1,18 @@
-## Montando o ambiente
+# Montando o ambiente
+
+# Índice 
+
+* [Montando o ambiente](#montando-o-ambiente)
+    * [Java](#java)
+    * [Android Studio](#android-studio)
+    * [Comandos de terminal](#comandos-de-terminal)
+
+* [Iniciando com Appium (emulador local)](#iniciando-com-appium-emulador-local)
+* [Instalar aplicativos dentro do emulador](#instalar-aplicativos-dentro-do-emulador)
+* [AVD](#avd)
+* [ADB](#adb)
+    * [Comandos ADB úteis](#comandos-adb-úteis)
+
 
 ### Java
 
