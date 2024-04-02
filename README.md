@@ -1,11 +1,10 @@
-# Montando o ambiente
+# 👷Montando o ambiente🏗️
 
-# Índice 
+# Índice 🗂️
 
-* [Montando o ambiente](#montando-o-ambiente)
-    * [Java](#java)
-    * [Android Studio](#android-studio)
-    * [Comandos de terminal](#comandos-de-terminal)
+* [Java](#java)
+* [Android Studio](#android-studio)
+* [Comandos de terminal](#comandos-de-terminal)
 
 * [Iniciando com Appium (emulador local)](#iniciando-com-appium-emulador-local)
 * [Instalar aplicativos dentro do emulador](#instalar-aplicativos-dentro-do-emulador)
@@ -14,7 +13,7 @@
     * [Comandos ADB úteis](#comandos-adb-úteis)
 
 
-### Java
+### Java ☕
 
 Baixe o **Java JDK** : https://www.oracle.com/br/java/technologies/downloads/
 
@@ -24,7 +23,7 @@ Coloque nas variáveis de ambiente o JAVA_HOME, que é o diretório que acabou d
 
 E depois adicione no path o caminho da pasta “`bin`” do java, neste formato: `%JAVA_HOME%\bin`
 
-### Android Studio
+### Android Studio 📲
 
 Baixe e instale o **Android Studio**: https://developer.android.com/studio?hl=pt-br seguindo os passos básicos
 
@@ -41,12 +40,12 @@ Após ter criado o emulador e conseguido executá-lo a primeira vez, coloque a p
 
 E logo depois crie duas variáveis de ambiente com os caminhos sendo “`%ANDROID_HOME%\platform-tools`” e “`%ANDROID_HOME%\emulator`” para ser possível executar o “adb” e o “emulator” por linha de comando..
 
-### Comandos de terminal
+### Comandos de terminal (emulator) 🚨
 
 - emulator -list-avds →  Mostra todas os dispositivos virtuais
 - emulator -avd `appium` → Inicia o emulador sem precisar abrir o android studio
 
-## Iniciando com Appium (emulador local)
+## Iniciando com Appium (emulador local) 🏁🏎️
 
 - Antes de instalar o Appium, instale o NVM que é o gerenciador de versões node, e instale a última versão a partir da que tem no site do node.
 - Abra o terminal em modo administrador e use os comandos NVM após colocá-lo nas variáveis de ambiente, caso ele não faça sozinho, é algo assim
