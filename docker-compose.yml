@@ -1,0 +1,24 @@
+version: '3.8'
+
+services: 
+  android:
+    privileged: true
+    image: budtmo/docker-android:emulator_14.0
+    container_name: android-container
+    shm_size: 4g
+    ports:
+      - "6080:6080"
+      - "4723:4723"
+      - "5554:5554"
+      - "5555:5555"
+    environment:
+      - APPIUM=true
+      - EMULATOR_DEVICE=Nexus 4
+      - APPIUM_ADDITIONAL_ARGS={'driver':'uiautomator2'}
+      - WEB_VNC=true
+    volumes:
+      - "./app:/root/tmp"
+    devices:
+      - "/dev/kvm"
+
+#docker run -d -p 6080:6080 -p 4723:4723 -p 5555:5555 -p 5554:5554 --shm-size=2g -e EMULATOR_DEVICE="Nexus 4" -e WEB_VNC=true -e APPIUM=true --device /dev/kvm --name android-container budtmo/docker-android:emulator_14.0
