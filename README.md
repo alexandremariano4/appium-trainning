@@ -69,7 +69,7 @@ Capabilities básicas e iniciais para iniciar sem aplicativo
   "platformName": "Android",
   "appium:deviceName": "emulator-5554",
   "appium:avd": "appium",
-  "appium:automationName": "UiAutomator2",
+  "appium:automationName": "UiAutomator2"
 }
 ```
 
@@ -82,7 +82,7 @@ Capabilities mais refinadas para abrir com um aplicativo ([Necessário ter o apl
 "appium:avd": "AppiumP",
 "appium:automationName": "UiAutomator2",
 "appPackage": "com.android.calculator2",
-"appActivity": "com.android.calculator2.Calculator",
+"appActivity": "com.android.calculator2.Calculator"
 }
 ```
 
