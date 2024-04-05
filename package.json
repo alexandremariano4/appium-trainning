@@ -1,0 +1,11 @@
+{
+  "name": "test_appium",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/alexandremariano4/appium.git",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "webdriverio": "^8.35.1"
+  }
+}
