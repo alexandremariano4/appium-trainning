@@ -11,6 +11,7 @@
 * [ADB](#adb)
     * [Comandos ADB úteis](#comandos-adb-úteis)
 * [Iniciando appium com Docker](#iniciando-appium-com-docker)
+    * [Abrindo o Container instalando o aplicativo a ser testado](#abrindo-o-container-instalando-o-aplicativo-a-ser-testado)
 * [Referências](#referências)
 
 
@@ -274,6 +275,37 @@ Suas capabilities ficarão mais ou menos desta forma
 ```
 
 A partir daqui já é possível usar o inspector normalmente.
+
+---
+### Abrindo o Container instalando o aplicativo a ser testado
+
+Você pode ter tido a bem provável necessidade de ao montar o container, o aplicativo a ser testado já estar instalado, nesta parte mostrarei como você pode fazer isso da maneira mais simples.
+
+Se você estiver usando o docker-compose localmente só para não ter que abrir android studio, você pode fazer o seguinte formato
+
+```powershell
+├──app
+│  └──calculadora.apk
+├──docker-compose.yml
+```
+
+Nesta estrutura, quando você executar o comando `docker compose up`  e seu arquivo docker tiver igual ou parecido a [este](https://www.notion.so/Appium-ed57c34b4a174238aef2212a2f094f04?pvs=21), quando o container for construído, será criado o diretório `/app/calculadora.apk` também dentro do container, e aí poderemos seguir com os próximos passos.
+
+Feito isso, caso você esteja usando o appium inspector, suas capabilities terão que ser a seguinte 
+
+```powershell
+{
+  "platformName": "Android",
+  "appium:options": {
+    "deviceName": "emulator-5554",
+    "avd": "nexus_4_14.0",
+    "automationName": "UiAutomator2",
+    "app": "/app/calculadora.apk"
+  }
+}
+```
+
+Caso esteja no código, terá que alterar as capabilities dependendo de qual linguagem você está utilizando.
 
 
 ---

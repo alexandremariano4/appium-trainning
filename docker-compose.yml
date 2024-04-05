@@ -15,8 +15,9 @@ services:
       - APPIUM=true
       - EMULATOR_DEVICE=Nexus 4
       - WEB_VNC=true
+
     volumes:
-      - "./app:/root/tmp"
+      - "./app:/app"
     devices:
       - "/dev/kvm"
 
