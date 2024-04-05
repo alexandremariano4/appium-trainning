@@ -10,6 +10,7 @@
 * [AVD](#avd)
 * [ADB](#adb)
     * [Comandos ADB úteis](#comandos-adb-úteis)
+* [Iniciando appium com Docker](#iniciando-appium-com-docker)
 * [Referências](#referências)
 
 
@@ -205,6 +206,69 @@ https://github.com/clarabez/comandosadb
 **adb uninstall io.appium.uiautomator2.server.test**
 
 **Usar os comandos acima ↑**
+
+---
+## Iniciando appium com Docker
+
+https://github.com/budtmo/docker-android
+
+Utilizando o seguinte arquivo “`docker-compose.yml`”, é possível subir um container docker com o docker-android escolhendo diversas opções de inicialização.
+
+```powershell
+version: '3.8'
+
+services: 
+  android:
+    privileged: true
+    image: budtmo/docker-android:emulator_14.0
+    container_name: android-container
+    shm_size: 4g
+    ports:
+      - "6080:6080"
+      - "4723:4723"
+      - "5554:5554"
+      - "5555:5555"
+    environment:
+      - APPIUM=true
+      - EMULATOR_DEVICE=Nexus 4
+      - WEB_VNC=true
+    volumes:
+      - "./app:/root/tmp"
+    devices:
+      - "/dev/kvm"
+
+#docker run -d -p 6080:6080 -p 4723:4723 -p 5555:5555 -p 5554:5554 --shm-size=4g -e EMULATOR_DEVICE="Nexus 4" -e WEB_VNC=true -e APPIUM=true --device /dev/kvm --name android-container budtmo/docker-android:emulator_14.0
+```
+
+A parte comentada é o mesmo comando, só que em vez de usar o docker compose, é executado diretamente pelo docker em linha de comando.
+
+---
+
+Ao fazer a instalação e execução, é possível verificar se foi aberto corretamente seu container entrando no endereço do noVNC para debuggar: http://localhost:6080/
+
+Estando aberto todas portas, é possível verificar usando o comando “`docker container ls`” e ver se o container que foi aberto do android-container está listando as portas.
+
+Feito isso, agora para conseguir usar o Appium Inspector, é necessário usar o seguinte comando no seu terminal (ou entrar por outra  forma no shell do seu container): 
+
+`docker exec -it -t android-container /bin/sh`
+
+Este comando faz com que seu terminal emule o shell do container e possa interagir, sendo assim, os comandos “adb” e “emulator” ficam disponíveis, e você pode usar o comando `emulator -list-avds` para verificar qual é o nome do avd que foi aberto para ser possível a inspeção usando o appium inspector
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/8c49aa8c-aee3-4994-a801-308a8f2cdb52/6665ce2a-72b0-45d2-8679-bb0777b9b5e2/Untitled.png)
+
+Suas capabilities ficarão mais ou menos desta forma
+
+```powershell
+{
+  "platformName": "Android",
+  "appium:deviceName": "emulator-5554",
+  "appium:avd": "nexus_4_14.0",
+  "appium:automationName": "UiAutomator2"
+}
+```
+
+A partir daqui já é possível usar o inspector normalmente.
+
 
 ---
 ## Referências
