@@ -254,7 +254,13 @@ Feito isso, agora para conseguir usar o Appium Inspector, é necessário usar o 
 
 Este comando faz com que seu terminal emule o shell do container e possa interagir, sendo assim, os comandos “adb” e “emulator” ficam disponíveis, e você pode usar o comando `emulator -list-avds` para verificar qual é o nome do avd que foi aberto para ser possível a inspeção usando o appium inspector
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/8c49aa8c-aee3-4994-a801-308a8f2cdb52/6665ce2a-72b0-45d2-8679-bb0777b9b5e2/Untitled.png)
+```
+docker exec -it -t android-container /bin/sh
+$ emulator -list-avds
+INFO    | Storing crashdata in: /tmp/android-unknown/emu-crash-34.1.19.db, detection is enabled for process: 1214
+nexus_4_14.0
+$
+```
 
 Suas capabilities ficarão mais ou menos desta forma
 
