@@ -75,7 +75,7 @@ Capabilities básicas e iniciais para iniciar sem aplicativo
 }
 ```
 
-Capabilities mais refinadas para abrir com um aplicativo ([Necessário ter o aplicativo instalado](https://www.notion.so/Appium-ed57c34b4a174238aef2212a2f094f04?pvs=21))
+Capabilities mais refinadas para abrir com um aplicativo (necessário ter o aplicativo instalado)
 
 ```powershell
 {
@@ -146,7 +146,7 @@ Agora com o aplicativo instalado, para conseguirmos preencher os valores destes 
   "appium:appActivity": "",
 ```
 
-Vamos seguir os passos indicados [aqui](https://www.notion.so/Appium-ed57c34b4a174238aef2212a2f094f04?pvs=21)
+Vamos seguir os passos indicados a frente
 
 ---
 
@@ -289,7 +289,7 @@ Se você estiver usando o docker-compose localmente só para não ter que abrir 
 ├──docker-compose.yml
 ```
 
-Nesta estrutura, quando você executar o comando `docker compose up`  e seu arquivo docker tiver igual ou parecido a [este](https://www.notion.so/Appium-ed57c34b4a174238aef2212a2f094f04?pvs=21), quando o container for construído, será criado o diretório `/app/calculadora.apk` também dentro do container, e aí poderemos seguir com os próximos passos.
+Nesta estrutura, quando você executar o comando `docker compose up`  e seu arquivo docker tiver igual ou parecido ao informado acima , quando o container for construído, será criado o diretório `/app/calculadora.apk` também dentro do container, e aí poderemos seguir com os próximos passos.
 
 Feito isso, caso você esteja usando o appium inspector, suas capabilities terão que ser a seguinte 
 
