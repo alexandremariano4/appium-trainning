@@ -7,7 +7,7 @@ from appium.options.android import UiAutomator2Options
 # Definindo as opções
 options = UiAutomator2Options()
 options.device_name = "emulator-5554"
-options.avd = "nexus_4_14.0"
+options.avd = "samsung_galaxy_s10_14.0"
 options.automation_name = "UiAutomator2"
 options.app = "/app/calculadora.apk"
 options.full_reset = True

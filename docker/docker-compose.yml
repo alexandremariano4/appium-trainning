@@ -15,7 +15,7 @@ services:
       - WEB_VNC=true
 
     volumes:
-      - "./app:/app"
+      - "../app:/app"
     devices:
       - "/dev/kvm"
 
