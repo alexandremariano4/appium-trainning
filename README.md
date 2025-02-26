@@ -325,6 +325,16 @@ Feito isso, instale o webdriverio usando `npm install webdriverio`
 
 E execute o comando `node teste.js`
 
+## Executando o código no arquivo de teste do repositório (Python + Selenium)
+
+Instale as dependências do projeto utilizando `pip install -r requirements.txt` , que fará a instalação do [Appium Python Client](https://pypi.org/project/Appium-Python-Client/) que é a forma que o python vai se conectar com o appium e enviar os comandos de interação.
+
+Ao finalizar a instalação, execute o docker que está no repositório utilizando `docker compose up -d` e rode a execução utilizando `python .\python\appiump.py`.
+
+Você pode ver a execução utilizando o noVNC pelo link http://localhost:6080/ (caso você não tenha alterado nenhuma porta). 
+
+Caso queira alterar algum comando ou verificar os identificadores, utilize o [Appium Inspector](#iniciando-com-appium-emulador-local-️)
+
 ---
 ## Referências
 - https://github.com/clarabez/appium
