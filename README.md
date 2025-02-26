@@ -12,6 +12,8 @@
     * [Comandos ADB úteis](#comandos-adb-úteis)
 * [Iniciando appium com Docker](#iniciando-appium-com-docker)
     * [Abrindo o Container instalando o aplicativo a ser testado](#abrindo-o-container-instalando-o-aplicativo-a-ser-testado)
+* [Desinstalando aplicativo instalado manualmente](#desinstalando-aplicativo-instalado-manualmente)
+* [Executando o código no arquivo de teste do repositório](#executando-o-código-no-arquivo-de-teste-do-repositório-webdriverio)
 * [Referências](#referências)
 
 
@@ -307,6 +309,21 @@ Feito isso, caso você esteja usando o appium inspector, suas capabilities terã
 
 Caso esteja no código, terá que alterar as capabilities dependendo de qual linguagem você está utilizando.
 
+---
+
+## Desinstalando aplicativo instalado manualmente
+
+Caso tenha instalado manualmente um aplicativo acessando o shell do container utilizando o comando `docker exec -it -t android-container /bin/sh` e feito o comando `adb install app.apk` mas você deseja desinstalar, primeiro busque o nome do pacote do app instalado utilizando o comando `adb shell pm list packages | grep <nome-do-app>` (caso esteja usando windows em vez do grep, use `findstr “nome-do-app”`). O retorno deverá ser algo como “package:com.google.android.calculator”, para desinstalar, use o comando `adb uninstall com.google.android.calculator` retirando o “package” do texto e será desinstalado corretamente.
+
+---
+
+## Executando o código no arquivo de teste do repositório (WebdriverIO)
+
+Abra no diretório principal e execute o comando `npm init -y` ou caso queira personalizar o arquivo package.json digite apenas `npm init`
+
+Feito isso, instale o webdriverio usando `npm install webdriverio`
+
+E execute o comando `node teste.js`
 
 ---
 ## Referências

@@ -13,7 +13,8 @@ const { remote } = require('webdriverio');
                 deviceName: 'emulator-5554',
                 avd: 'nexus_4_14.0',
                 automationName: 'UiAutomator2',
-                app: '/app/calculadora.apk'
+                app: '/app/calculadora.apk',
+                fullReset: true
             }
         }
     };
